@@ -1,0 +1,221 @@
+/* Universal Resets */
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* Universal Resets End*/
+
+
+/* CSS Variables */
+:root{
+    --primaryColor:#f8c537;
+    --primaryFont: font-family: 'Roboto', sans-serif;
+    --letterSpacing:0.2rem;
+    --mainTransition: all 0.2s ease-in-out;
+
+}
+/* CSS Variables End*/
+
+/* Body Resets */
+h1{
+    font-size:3rem;
+    font-style: italic;
+    text-transform: uppercase;
+    font-family: var(--primaryFont);
+}
+
+a{
+    text-decoration: none;
+}
+/* Body Resets End */
+
+/* Global */
+
+.primary-btn{
+    background: transparent;
+    border: 3px solid var(--primaryColor);
+    margin: 1rem;
+    padding: 0.6rem;
+    color: var(--primaryColor);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: var(--primaryFont);
+}
+
+.primary-btn:hover{
+    background: var(--primaryColor);
+    color: white;
+    transition: var(--mainTransition);
+}
+
+.section-adjust{
+    padding: 2rem;
+}
+/* Global End */
+
+/* Header */
+
+    /* Nav */
+nav{
+    background: var(--primaryColor);
+    padding: 1rem 0 0 0;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.nav-list{
+    background: black;
+    position: relative;
+    margin: 0;
+    padding: 1rem;
+    
+
+}
+.u-nav{
+    display: flex;
+    /* padding: 1rem 2rem; */
+    flex-wrap: wrap;
+    list-style-type:none;
+}
+
+.nav-items{
+    font-family: var(--primaryFont);
+    font-size: 1.5rem;
+    display: block;
+    padding: 0.2rem 1rem;
+    color: var(--primaryColor);
+}
+
+.nav-items:hover{
+    color: white;
+}
+
+.arrow{
+    color: black;
+    font-size: 2.5rem;
+    text-align: end;
+    padding: 1rem;
+}
+
+.logo, .arrow, .nav-list{
+    flex: 1 0 50%;
+}
+
+.logo-name{
+    max-width: 500px;
+}
+
+.logo{
+    padding: 0 2rem;
+}
+@media screen and (min-width: 768px){
+    .arrow{
+        display: none;
+    }
+    .logo{
+        flex: 1 0 1%;
+    }
+    .u-nav{
+        flex-grow: 1;
+        justify-content: space-evenly;
+    }
+}
+
+
+@media screen and (max-width: 524px)
+{
+    .logo, .arrow, .nav-list{
+        flex:1 0 100%;
+    }
+    .nav-items{
+        flex:1 0 100%;
+    }
+    .arrow{
+        text-align: center;
+    }
+    .nav-items{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .logo{
+        text-align: center;
+    }
+}
+/* Nav End */
+/* Hero */
+.hero{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-hero{
+    min-height: 100vh;
+    background:linear-gradient(to top, rgba(0,0,0,0.6),rgba(0,0,0,0.2)), url("/images/background-banner.jpg")center/cover fixed no-repeat;
+}
+
+.web-agency-text{
+    color: whitesmoke;
+    text-align: center;
+    margin: 2rem;
+}
+
+
+
+@media screen and (max-width:524px){
+    .web-agency{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .primary-btn{
+        margin-left: 6rem;
+    }
+}
+/* Hero End */
+
+/* Features */
+.features{
+    background:  #F7DCB4;
+}
+.icon{
+    margin: 1rem 0;
+    font-size: 3rem;
+    text-align: center;
+}
+.feature-items{
+    margin:3rem 0;
+}
+.feature-text{
+    text-align: center;
+}
+.feature-title{
+    color: var(--primaryColor);
+    text-transform: uppercase;
+}
+.feature-des{
+    max-width: 23rem;
+    margin: 1rem auto;
+}
+
+@media screen and (min-width: 576px){
+    .features{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .features{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+/* Features End */
+
+/* Header End*/
