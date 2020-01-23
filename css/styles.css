@@ -36,7 +36,7 @@ a{
 .primary-btn{
     background: transparent;
     border: 3px solid var(--primaryColor);
-    margin: 1rem;
+    margin: 2rem 1rem 2rem 0;
     padding: 0.6rem;
     color: var(--primaryColor);
     font-size: 1.5rem;
@@ -53,12 +53,21 @@ a{
 .section-adjust{
     padding: 2rem;
 }
+
+.section-center{
+    margin: 2rem;
+    
+}
 /* Global End */
 
 /* Header */
 
     /* Nav */
 nav{
+    /* position: fixed;
+    top:0;
+    left: 0;
+    right: 0; */
     background: var(--primaryColor);
     padding: 1rem 0 0 0;
     display: flex;
@@ -162,10 +171,14 @@ nav{
 .web-agency-text{
     color: whitesmoke;
     text-align: center;
-    margin: 2rem;
 }
 
 
+.underline{
+    width: 10rem;
+    border: 3px solid var(--primaryColor);
+    margin: 0rem auto 2rem auto;
+}
 
 @media screen and (max-width:524px){
     .web-agency{
@@ -217,5 +230,85 @@ nav{
     }
 }
 /* Features End */
+/* Services */
+.services{
+    min-height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url("/images/services.jpeg")center/cover fixed no-repeat;
+}
+
+.services-text{
+    text-align: center;
+    color: var(--primaryColor);
+    padding-top: 3rem;
+}
+
+.services-items{
+    border: 2px solid var(--primaryColor);
+    position: relative;
+    overflow: hidden;
+    justify-items: center;
+
+}
+
+.services-icon{
+    color: var(--primaryColor);
+    font-size: 2.5rem;
+    
+}
+.title-center, .title-start{
+    color: white;
+    font-size: 1.1rem;
+    font-family: var(--primaryFont);
+    margin: 1rem 0;
+}
+.services-des{
+    color: white;
+    font-family: var(--primaryFont);
+    max-width: 25rem;
+}
+
+.scroll-division{
+    padding: 2rem 0;
+    
+}
+
+
+.scroll-division-2{
+    position: absolute;
+    top: 15rem;
+    left: 1rem;
+}
+
+.services-items:hover .scroll-division-2{
+    top:1rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.services-items:hover .scroll-division{
+    transform: translateY(-15rem);
+    transition: all 0.5s ease-in-out;
+}
+
+
+@media screen and (min-width: 768px){
+    .services-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        
+    }
+    /* .services-items{
+        justify-content: center;
+    } */
+}
+
+/* @media screen and (min-width: 992px){
+    .services-list{
+        grid-template-columns: repeat(4, 1fr);
+    }
+} */
+/* Services End */
 
 /* Header End*/
+
+
