@@ -47,6 +47,7 @@ img{
     font-size: 1.5rem;
     text-transform: uppercase;
     font-family: var(--primaryFont);
+    max-width: 15rem;
 }
 
 .primary-btn:hover{
@@ -325,6 +326,7 @@ nav{
     position: relative;
     overflow: hidden;
     max-width: 500px;
+    margin: 1rem 0;
 }
 .project-text{
     height: 100%;
@@ -406,7 +408,7 @@ nav{
 
 /* Filler */
 .section-filler{
-    display: grid;
+    display: flex;
     justify-content: end;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/filler.jpeg") fixed no-repeat;
     background-size: cover;
@@ -429,6 +431,7 @@ nav{
     background: mintcream;
     display: grid;
     grid-template-rows: 1fr auto;
+    margin: 1rem 0;
 }
 
 .post-image{
@@ -481,4 +484,36 @@ nav{
 /* Posts End */
 /* Header End*/
 
+/* Footer */
+
+footer{
+    background: black;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+
+.copyright h2{
+    color: white;
+    font-family: var(--primaryFont);
+    font-size: 1rem;
+    text-transform: uppercase;
+
+}
+
+.social-links i{
+    color: white;
+    font-size: 2rem;
+    padding: 0 0.2rem;
+}
+
+.social-links>i:hover{
+    color: var(--primaryColor);
+    transform: scale(1.2) translateY(-10px);
+    transition: all 0.5s ease-in-out;
+}
+/* Footer End */
 
