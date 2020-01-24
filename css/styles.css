@@ -374,7 +374,8 @@ nav{
 .project-grid-item:hover .project-text{
     display: block;
     background: black;
-    opacity: 0.5;;
+    opacity: 0.5;
+    z-index: 1;
     
 }
 
@@ -402,6 +403,21 @@ nav{
 }
 
 /* Projects End */
+
+/* Filler */
+.section-filler{
+    display: grid;
+    justify-content: end;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/filler.jpeg") fixed no-repeat;
+    background-size: cover;
+
+}
+
+.filler-image{
+    padding: 2rem;
+}
+
+/* Filler End */
 
 /* Posts */
 
@@ -435,21 +451,24 @@ nav{
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
-
- 
+    z-index: 1;
 }
 
 .post-image:hover .search-icon{
     display: block;
+        
+}
+
+
+.post-image:hover .black-layer>img{
+    opacity: 0.5;
+    transition: opacity 0.5s linear;
 }
 
 
 .black-layer{
     height: 100%;
-}
-
-.post-image:hover .black-layer>img{
-    background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
+    background: black;
 }
 
 @media screen and (min-width:992px){
